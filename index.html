@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditi | Personal Portfolio</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #F5F7FA;
+  color: #1E293B;
+  line-height: 1.7;
+}
+
+header {
+  background: #142D4E;
+  color: white;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h2 { color: #4DA8DA; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  padding: 85px 20px;
+  background: linear-gradient(135deg, #142D4E, #285B83);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin: 12px 0;
+}
+
+.hero span { color: #76CCF2; }
+
+.hero p {
+  max-width: 600px;
+  margin: 12px auto;
+}
+
+.btn {
+  display: inline-block;
+  background: #4DA8DA;
+  color: white;
+  padding: 11px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+section {
+  padding: 55px 9%;
+}
+
+h2.section-title {
+  text-align: center;
+  color: #142D4E;
+  margin-bottom: 28px;
+}
+
+.about {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+}
+
+.skills, .projects, .education {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(20,45,78,0.08);
+}
+
+.card h3 { color: #245B86; margin-bottom: 10px; }
+
+.card p { font-size: 14px; }
+
+.contact {
+  text-align: center;
+  background: #EAF3FA;
+}
+
+.contact a {
+  color: #176B9A;
+  text-decoration: none;
+}
+
+footer {
+  background: #142D4E;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  header { justify-content: center; gap: 10px; }
+  nav { text-align: center; }
+  nav a { display: inline-block; }
+  .hero h1 { font-size: 32px; }
+  section { padding: 40px 6%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Aditi.</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <p>Hello, welcome to my portfolio!</p>
+  <h1>Hi, I'm <span>Aditi</span></h1>
+  <h3>First Year IT Student</h3>
+  <p>Exploring technology, learning programming and building creative solutions through code.</p>
+  <a href="#projects" class="btn">Explore My Projects</a>
+</div>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about">
+    <p>
+      I am a first-year Information Technology student at
+      Shri Sant Gajanan Maharaj College of Engineering,
+      Shegaon. I am passionate about technology,
+      programming and continuous learning.
+      I enjoy exploring new ideas and turning them
+      into practical projects.
+    </p>
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="education">
+    <div class="card">
+      <h3>B.Tech – Information Technology</h3>
+      <p>Shri Sant Gajanan Maharaj College of Engineering, Shegaon</p>
+      <p>First Year</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills">
+    <div class="card"><h3>C Programming</h3><p>Beginner – Learning fundamentals and logic building.</p></div>
+    <div class="card"><h3>Python</h3><p>Beginner – Practicing loops, functions and programs.</p></div>
+    <div class="card"><h3>HTML</h3><p>Learning webpage structure and elements.</p></div>
+    <div class="card"><h3>CSS</h3><p>Learning styling and responsive layouts.</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Student Success Hub</h3>
+      <p>A student productivity dashboard with study tasks, assignment tracking, weekly planning and progress monitoring.</p>
+      <p><b>Technologies:</b> React, CSS, JavaScript</p>
+    </div>
+    <div class="card">
+      <h3>Python Calculator</h3>
+      <p>A beginner-friendly calculator built to practice Python programming and basic operations.</p>
+      <p><b>Technology:</b> Python</p>
+    </div>
+    <div class="card">
+      <h3>C Programming Programs</h3>
+      <p>Small programs including even or odd checking, grade calculation and basic calculator.</p>
+      <p><b>Technology:</b> C</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">Get In Touch</h2>
+  <p>I'm interested in learning, collaborating and connecting with people in technology.</p>
+  <p>GitHub: <a href="https://github.com/farkndkaraditi-ops" target="_blank">My GitHub Profile</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/" target="_blank">Find me on LinkedIn</a></p>
+</section>
+
+<footer>
+  <p>© 2026 Aditi | Personal Portfolio</p>
+  <p>Designed with curiosity and a passion for learning.</p>
+</footer>
+
+</body>
+</html>
