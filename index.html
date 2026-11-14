@@ -7,6 +7,7 @@
 <title>Aditi | Personal Portfolio</title>
 
 <style>
+  
 * {
   margin: 0;
   padding: 0;
@@ -15,126 +16,153 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #F5F7FA;
-  color: #1E293B;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0b1020;
+  color: #e8edff;
   line-height: 1.7;
 }
 
 header {
-  background: #142D4E;
+  background: rgba(15, 23, 48, 0.96);
   color: white;
   padding: 18px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  border-bottom: 1px solid rgba(130, 120, 255, 0.25);
 }
 
-header h2 { color: #4DA8DA; }
+header h2 {
+  color: #a78bfa;
+  font-size: 27px;
+}
 
 nav a {
-  color: white;
+  color: #d5dcf5;
   text-decoration: none;
   margin: 8px;
   font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #a78bfa;
 }
 
 .hero {
   text-align: center;
   padding: 85px 20px;
-  background: linear-gradient(135deg, #142D4E, #285B83);
+  background: linear-gradient(135deg, #111a36, #25205a, #173b63);
   color: white;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 48px;
   margin: 12px 0;
 }
 
-.hero span { color: #76CCF2; }
+.hero span {
+  color: #a78bfa;
+}
 
 .hero p {
   max-width: 600px;
   margin: 12px auto;
+  color: #d1d9f5;
 }
 
-.btn {
+.btn, .project-btn {
   display: inline-block;
-  background: #4DA8DA;
+  background: linear-gradient(90deg, #7657f5, #3199e8);
   color: white;
-  padding: 11px 24px;
-  border-radius: 6px;
+  padding: 12px 24px;
+  border-radius: 30px;
   text-decoration: none;
-  margin-top: 20px;
+  margin-top: 18px;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn:hover, .project-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(118, 87, 245, 0.4);
 }
 
 section {
-  padding: 55px 9%;
+  padding: 65px 9%;
 }
 
 h2.section-title {
   text-align: center;
-  color: #142D4E;
-  margin-bottom: 28px;
+  color: #b6a5ff;
+  margin-bottom: 32px;
+  font-size: 30px;
 }
 
 .about {
   max-width: 750px;
   margin: auto;
   text-align: center;
+  color: #cbd5e1;
 }
 
 .skills, .projects, .education {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
 }
 
 .card {
-  background: white;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 3px 14px rgba(20,45,78,0.08);
+  background: linear-gradient(145deg, #182442, #202b4b);
+  padding: 26px;
+  border-radius: 18px;
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
-.card h3 { color: #245B86; margin-bottom: 10px; }
+.card:hover {
+  transform: translateY(-7px);
+  border-color: #9278ff;
+  box-shadow: 0 12px 30px rgba(118, 87, 245, 0.18);
+}
 
-.card p { font-size: 14px; }
+.card h3 {
+  color: #a78bfa;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #d0d8ee;
+  margin-bottom: 8px;
+}
 
 .contact {
   text-align: center;
-  background: #EAF3FA;
+  background: linear-gradient(135deg, #171d3b, #202c50);
+  border-top: 1px solid rgba(167, 139, 250, 0.2);
 }
 
 .contact a {
-  color: #176B9A;
+  color: #8fcaff;
   text-decoration: none;
 }
 
-footer {
-  background: #142D4E;
-  color: white;
-  text-align: center;
-  padding: 18px;
-  font-size: 13px;
+.contact a:hover {
+  color: #c4b5fd;
+  text-decoration: underline;
 }
 
-@media(max-width:600px) {
-  header { justify-content: center; gap: 10px; }
-  nav { text-align: center; }
-  nav a { display: inline-block; }
-  .hero h1 { font-size: 32px; }
-  section { padding: 40px 6%; }
-}
-  .profile-photo {
+.profile-photo {
   margin: 20px auto;
   width: 160px;
   height: 160px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #76CCF2;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  border: 4px solid #a78bfa;
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.4);
 }
 
 .profile-photo img {
@@ -142,20 +170,38 @@ footer {
   height: 100%;
   object-fit: cover;
 }
-  .project-btn {
-    display: inline-block;
-    background: #007bff;
-    color: white;
-    padding: 10px 18px;
-    text-decoration: none;
-    border-radius: 6px;
-    margin-top: 10px;
+
+footer {
+  background: #080d1b;
+  color: #aebbd6;
+  text-align: center;
+  padding: 22px;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  header {
+    justify-content: center;
+    gap: 10px;
   }
-  .card .project-btn {
-    display: inline-block;
-    visibility: visible;
-    opacity: 1;
+
+  nav {
+    text-align: center;
   }
+
+  nav a {
+    display: inline-block;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  section {
+    padding: 45px 6%;
+  }
+}
+
 </style>
 </head>
 
@@ -182,6 +228,7 @@ footer {
   <h3>First Year IT Student</h3>
   <p>Exploring technology, learning programming and building creative solutions through code.</p>
   <a href="#projects" class="btn">Explore My Projects</a>
+</div>
   
 
 <section id="about">
