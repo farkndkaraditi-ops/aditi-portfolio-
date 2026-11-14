@@ -315,6 +315,52 @@ footer {
   }
 }
   
+.skill-bar {
+  height: 9px;
+  background: #303b5c;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #7657f5, #3199e8);
+  border-radius: 20px;
+  transition: width 1.5s ease;
+}
+
+.skill-level {
+  display: flex;
+  justify-content: space-between;
+  color: #b9c6e4;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.skill-bar {
+  height: 9px;
+  background: #303b5c;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #7657f5, #3199e8);
+  border-radius: 20px;
+  transition: width 1.5s ease;
+}
+
+.skill-level {
+  display: flex;
+  justify-content: space-between;
+  color: #b9c6e4;
+  font-size: 12px;
+  margin-top: 10px;
+}
 
 </style>
 </head>
@@ -391,9 +437,22 @@ footer {
 </section>
 
 <section id="skills">
-  <h2 class="section-title">My Skills</h2>
-  <div class="skills">
-    <div class="card"><h3>C Programming</h3><p>Beginner – Learning fundamentals and logic building.</p></div>
+  <div class="card">
+  <h3>HTML</h3>
+  <p>Building webpage structures and elements.</p>
+  <div class="skill-level">
+    <span>Beginner</span>
+    <span>Learning</span>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-fill" data-width="45%"></div>
+  </div>
+</div>
+  <div class="skill-bar">
+    <div class="skill-fill" data-width="30%"></div>
+  </div>
+</div>
+
     <div class="card"><h3>Python</h3><p>Beginner – Practicing loops, functions and programs.</p></div>
     <div class="card"><h3>HTML</h3><p>Learning webpage structure and elements.</p></div>
     <div class="card"><h3>CSS</h3><p>Learning styling and responsive layouts.</p></div>
@@ -416,6 +475,17 @@ footer {
     </div>
     <div class="card">
   <h3>Python Calculator</h3>
+      <div class="card">
+  <h3>Python</h3>
+  <p>Practicing loops, functions and programming logic.</p>
+  <div class="skill-level">
+    <span>Beginner</span>
+    <span>Learning</span>
+  </div>
+  <div class="skill-bar">
+    <div class="skill-fill" data-width="35%"></div>
+  </div>
+      </div>
   <p>A beginner-friendly calculator built to practice Python programming and basic operations.</p>
   <p><b>Technology:</b> Python</p>
   <a href="https://github.com/farkndkaraditi-ops/python-calculator-" target="_blank" class="project-btn">View Project</a>
@@ -528,6 +598,22 @@ topButton.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+  
+// Animate skill progress bars
+const skillObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const bar = entry.target;
+      bar.style.width = bar.dataset.width;
+      skillObserver.unobserve(bar);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll(".skill-fill").forEach(bar => {
+  skillObserver.observe(bar);
+});
+
   </script>  
 </body>
 </html>
